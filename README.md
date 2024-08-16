@@ -1,4 +1,4 @@
-# littleHelpHand
+# littleHelpHand (Cruz)
 
 這是一個AI小幫手
 透過連接本地AI引擎
