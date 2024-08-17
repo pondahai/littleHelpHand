@@ -113,7 +113,7 @@ def translate_text_function():
     clipboard_content = pyperclip.paste()
     api_payload = {
 #         "model": "gpt-3.5-turbo",
-        "messages": [{"role": "system", "content": "Reply in zh_TW. Only Translate the following text:"}, {"role": "user", "content": clipboard_content}],
+        "messages": [{"role": "system", "content": "以zh_TW回答"}, {"role": "user", "content": clipboard_content + " 翻譯成zh_TW"}],
         "stream": True
     }
     stream_output(translate_text, api_payload)
@@ -136,7 +136,7 @@ def summarize_text_function():
     clipboard_content = pyperclip.paste()
     api_payload = {
 #         "model": "gpt-3.5-turbo",
-        "messages": [{"role": "system", "content": "Reply in zh_TW. Only Summarize the following text:"}, {"role": "user", "content": clipboard_content}],
+        "messages": [{"role": "system", "content": "以zh_TW回答"}, {"role": "user", "content": clipboard_content + " 以zh_TW做出總結:"}],
         "stream": True
     }
     stream_output(summary_text, api_payload)
